@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59417f585390d664084acfac119d0eb7, type: 3}
+  m_Name: LevelSetting
+  m_EditorClassIdentifier: 
+  asteroidModel: {fileID: 0}
+  speedMin: 1
+  speedMax: 5
+  createDelay: 0.1
+  randomRotMin: 1
+  randomRotMax: 3
+  asteroidScaleMin: 1
+  asteroidScaleMax: 1
