@@ -349,5 +349,6 @@ MonoBehaviour:
   speed: 8
   speedRotation: 300
   firingDelay: 0.1
+  health: 100
   bullet_Prefab: {fileID: 2986888512946400776, guid: fed13493558073d45b70ab61d19024cf, type: 3}
   shootingPivot: {fileID: 1634227972}

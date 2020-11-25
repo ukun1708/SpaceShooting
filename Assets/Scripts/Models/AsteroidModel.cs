@@ -15,6 +15,14 @@ public class AsteroidModel : MonoBehaviour
         transform.localScale = _scale;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "SpaceShip")
+        {    
+            Destroy(gameObject);
+        }
+    }
+
     private void Update()
     {        
         transform.rotation *= angularRot;
