@@ -11,6 +11,7 @@ public class VFX_Graph_Integrator : MonoBehaviour
     void Start()
     {
         visual = GetComponent<VisualEffect>();
+        visual.Play();
     }
 
     // Update is called once per frame
