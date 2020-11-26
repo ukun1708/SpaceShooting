@@ -46,8 +46,16 @@ public class AsteroidModel : MonoBehaviour, IDamage
             if (health <= 0f)
             {
                 Debug.Log("Астероид уничтожен");
+
+                Explosion_Asteroid.Singleton.Boom();
+
+                Explosion_Asteroid.Singleton.transform.position = gameObject.transform.position;
+
                 Destroy(gameObject);
             }
         }
     }
+
+    
+
 }

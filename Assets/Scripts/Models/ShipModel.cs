@@ -24,11 +24,14 @@ public class ShipModel : MonoBehaviour
 
             if (health <= 0)
             {
+                FiringController.Singleton.fire = false;
+
                 gameObject.SetActive(false);
 
                 Explosion.Singleton.Explode();
 
                 Debug.Log("Корабль уничтожен");
+                
             }
         }        
     }

@@ -65,6 +65,7 @@ MonoBehaviour:
   speed: 1
   angularRot: {x: 0, y: 0, z: 0, w: 0}
   _scale: {x: 0, y: 0, z: 0}
+  health: 100
 --- !u!54 &8820621913369468267
 Rigidbody:
   m_ObjectHideFlags: 0

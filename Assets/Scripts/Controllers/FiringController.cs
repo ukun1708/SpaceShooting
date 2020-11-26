@@ -7,13 +7,18 @@ public class FiringController : MonoBehaviour
     public ShipModel ship;
 
     private float time = 0f;
-    
+
+    public bool fire = true;
+
+    public static FiringController Singleton;
     void Start()
     {
-        
+        Singleton = this;
+
+        fire = true;
     }
 
-    
+
     void Update()
     {
         time += Time.deltaTime;
@@ -22,10 +27,15 @@ public class FiringController : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                var bullet = Instantiate(ship.bullet_Prefab.gameObject, ship.shootingPivot.position, Quaternion.identity);
+                if (fire == true)
+                {
+                    var bullet = Instantiate(ship.bullet_Prefab.gameObject, ship.shootingPivot.position, Quaternion.identity);
 
-                time = 0f;
+                    time = 0f;
+                }
+                
             }
+
         }
     }
 }
