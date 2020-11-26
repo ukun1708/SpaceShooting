@@ -7,6 +7,7 @@ public class Explosion_Asteroid : MonoBehaviour
     public VisualEffect effect;
 
     public static Explosion_Asteroid Singleton;
+
     void Start()
     {
         Singleton = this;
@@ -14,6 +15,8 @@ public class Explosion_Asteroid : MonoBehaviour
         effect = GetComponent<VisualEffect>();
 
         effect.Stop();
+
+        effect.enabled = true;
     }
 
     public void Boom()
