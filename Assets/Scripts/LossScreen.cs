@@ -8,9 +8,13 @@ public class LossScreen : MonoBehaviour
 
     public GameObject lossScreen;
 
+    public GameObject WinScreen;
+
     void Start()
     {
         lossScreen.SetActive(false);
+
+        WinScreen.SetActive(false);
     }
 
     
@@ -18,8 +22,16 @@ public class LossScreen : MonoBehaviour
     {
         if (ship.health <= 0)
         {
+            Debug.Log("Вы проиграли");
             StartCoroutine(LossPop());
         }
+
+        if (AsteroidCounter.Singleton.countAsteroid >= 20)
+        {
+            Debug.Log("Вы выиграли");
+            StartCoroutine(WinPop());
+        }
+
     }
 
     IEnumerator LossPop()
@@ -27,6 +39,15 @@ public class LossScreen : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         lossScreen.SetActive(true);
+
+        yield return null;
+    }
+
+    IEnumerator WinPop()
+    {
+        yield return new WaitForSeconds(1f);
+
+        WinScreen.SetActive(true);
 
         yield return null;
     }

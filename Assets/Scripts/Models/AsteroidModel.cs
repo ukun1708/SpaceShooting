@@ -31,7 +31,7 @@ public class AsteroidModel : MonoBehaviour, IDamage
 
         transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
 
-        if (transform.position.y < -7f)
+        if (transform.position.y < -7f || transform.position.x >= 3f || transform.position.x <= -3f)
         {
             Destroy(gameObject);
         }
@@ -50,6 +50,8 @@ public class AsteroidModel : MonoBehaviour, IDamage
                 Explosion_Asteroid.Singleton.Boom();
 
                 Explosion_Asteroid.Singleton.transform.position = gameObject.transform.position;
+
+                AsteroidCounter.Singleton.countAsteroid++;
 
                 Destroy(gameObject);
             }

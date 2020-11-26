@@ -22,6 +22,10 @@ public class ShipModel : MonoBehaviour
         {
             damageShip();
 
+            Explosion_Asteroid.Singleton.Boom();
+
+            Explosion_Asteroid.Singleton.transform.position = gameObject.transform.position;
+
             if (health <= 0)
             {
                 FiringController.Singleton.fire = false;
